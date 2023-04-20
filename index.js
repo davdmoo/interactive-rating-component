@@ -2,7 +2,7 @@
 let rating = 0;
 let currentlyClicked;
 
-function onClick(newRating) {
+function updateRating(newRating) {
   rating = newRating;
 
   if (currentlyClicked !== undefined) {
@@ -24,7 +24,7 @@ function controlDialog(command) {
   return dialog.show();
 }
 
-function navigate() {
+function submit() {
   if (rating === 0) {
     return controlDialog("show");
   }
